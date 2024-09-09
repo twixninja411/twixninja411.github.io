@@ -15,12 +15,10 @@ function makeEmbed() {
     let vStr = src.substring(stPos,endPos);
     let newLink = "https://youtube.com/embed/" + vStr;
     
-    let aEle = document.createElement("a");
-    aEle.setAttribute("href",newLink);
-    aEle.setAttribute("target","_blank");
-    let aText = document.createTextNode(newLink);
-    aEle.appendChild(aText);
-    dstEle.appendChild(aEle);
+    let pEle = document.createElement("p");
+    let pText = document.createTextNode(newLink);
+    pEle.appendChild(pText);
+    dstEle.appendChild(pEle);
   }
   return false;
 }
