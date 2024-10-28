@@ -46,11 +46,15 @@ function multFromEff(e)
 {
   if(e.imm)
   {
-    return 0;
+    return "0";
+  }
+  else if(e.eff >= 0)
+  {
+    return "" + 2**e.eff;
   }
   else
   {
-    return 2**e.eff;
+    return "1/" + 2**(-e.eff);
   }
 }
 
